@@ -510,9 +510,268 @@ tr:nth-child(even) {
 }
 
 
+.tooltip {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0%, 0%, 0%, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip__register {
+  padding-top: 10px;
+  background-color: #fff;
+  width: 812px;
+  height: 570px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tooltip__title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 0;
+}
+
+.tooltip__forms-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+.tooltip__input_text {
+  width: 556px;
+  height: 89px;
+  border: none;
+  border-bottom: 2px solid #000;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.tooltip__input_text::placeholder {
+  font-size: 48px;
+  color: #000;
+}
+
+.tooltip__input_text:focus {
+  outline: none;
+}
+
+.tooltip__btn-container {
+  background-color: #4FBE79;
+  width: 812px;
+  height: 106px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.menu__btn_login,
+.tooltip__btn_cancel,
+.tooltip__btn_login {
+  width: 248px;
+  height: 60px;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 22px;
+}
+
+.menu__btn_login {
+  position: absolute;
+  left: 38px;
+  bottom: 12px;
+  background: none;
+}
+
+.tooltip__btn_cancel {
+  background-color: #E53935;
+}
+
+.tooltip__btn_login {
+  background: none;
+}
+
+
+
+
+
+
+
+
+.admin__main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin__category {
+  width: 320px;
+  height: 244px;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  font-size: 22px;
+  margin: 20px 25px;
+}
+
+.admin__btn_del {
+  margin-left: 290px;
+  border: 0;
+  background-color: #fff;
+}
+
+.admin__category_name {
+  text-align: center;
+  font-weight: bold;
+}
+
+.admin__category_length {
+  margin-left: 54px;
+}
+
+.admin__btn_update-category,
+.admin__add-word {
+  width: 144px;
+  height: 34px;
+  color: #00BF82;
+  border: 1px solid #00BF82;
+  margin-left: 6px;
+  background: none;
+}
+
+.admin__header {
+  height: 97px;
+  width: 100%;
+  background-color: #00BF82;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.admin__header_btn {
+ background-color: #00BF82;
+ border: none;
+ color: #fff;
+ font-size: 22px;
+}
+
+.admin__new-card_category {
+  padding-top: 26px;
+}
+
+.admin__img_plus {
+  margin-left: 114px;
+}
+
+.label__new-category {
+  font-size: 9px;
+  color: #3F51B5;
+  margin-left: 34px;
+}
+
+.new-category__name,
+.word__input {
+  border: none;
+  border-bottom: 1px solid #3F51B5;
+  font-size: 22px;
+  margin-bottom: 70px;
+  margin-left: 34px;
+  width: 250px;
+}
+
+.new-category__name:focus,
+.word__input:focus {
+  outline: none;
+}
+
+.admin__btn_category-cancel,
+.admin__btn_category-create,
+.admin__btn_update,
+.admin__change-word,
+.word__btn_cancel,
+.word__btn_submit {
+  width: 142px;
+  height: 54px;
+  background: none;
+  border-radius: 5px;
+  font-size: 22px;
+}
+
+.admin__btn_category-cancel {
+  border: 2px solid #E53935;
+  color: #E53935;
+  margin-left: 10px;
+  margin-right: 4px;
+}
+
+.word__btn_cancel {
+  border: 2px solid #E53935;
+  color: #E53935;
+}
+
+.admin__btn_category-create,
+.admin__btn_update,
+.admin__change-word,
+.word__btn_submit {
+  border: 2px solid #00BF82;
+  color: #00BF82;
+}
+
+.admin__word {
+  width: 361px;
+  height: 458px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.admin__word > img {
+  width: 253px;
+  height: 170px;
+}
+
+.admin__word > .admin__img_plus-word {
+  width: 150px;
+  height: 150px;
+}
+
+.admin__word_name {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.card__title_span {
+  font-size: 22px;
+}
+
+.admin__btn_del-word {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  background: none;
+}
+
+.word__name,
+.word__translation  {
+  margin-bottom: 0;
+}
+
+
+
 
 @media (min-width: 1050px) and (max-width: 1449px) {
-
   .app {
     width: 1050px;
   }
@@ -528,11 +787,9 @@ tr:nth-child(even) {
   .statistics__table {
     width: 1050px;
   }
-
 }
 
 @media (min-width: 800px) and (max-width: 1049px) {
-
   .app {
     width: 800px;
   }
@@ -548,11 +805,9 @@ tr:nth-child(even) {
   .statistics__table {
     width: 800px;
   }
-
 }
 
 @media (max-width: 799px) {
-
   .app {
     width: 320px;
   }
@@ -580,9 +835,9 @@ tr:nth-child(even) {
     width: 320px;
   }
 
-  th, td {
+  th,
+  td {
     padding: 0;
   }
-
 }
 
