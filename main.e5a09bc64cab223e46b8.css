@@ -600,6 +600,10 @@ tr:nth-child(even) {
   background: none;
 }
 
+#sound,
+#image {
+  display: none;
+}
 
 
 
@@ -613,6 +617,7 @@ tr:nth-child(even) {
 }
 
 .admin__category {
+  position: relative;
   width: 320px;
   height: 244px;
   border: 2px solid rgba(0, 0, 0, 0.4);
@@ -621,13 +626,8 @@ tr:nth-child(even) {
   margin: 20px 25px;
 }
 
-.admin__btn_del {
-  margin-left: 290px;
-  border: 0;
-  background-color: #fff;
-}
-
 .admin__category_name {
+  margin-top: 22px;
   text-align: center;
   font-weight: bold;
 }
@@ -637,13 +637,20 @@ tr:nth-child(even) {
 }
 
 .admin__btn_update-category,
-.admin__add-word {
+.admin__add-word,
+.label__btn {
   width: 144px;
   height: 34px;
   color: #00BF82;
   border: 1px solid #00BF82;
   margin-left: 6px;
   background: none;
+}
+
+.label__btn {
+  display: inline;
+  padding-top: 4px;
+  padding-left: 30px;
 }
 
 .admin__header {
@@ -655,11 +662,23 @@ tr:nth-child(even) {
   justify-content: space-around;
 }
 
-.admin__header_btn {
+.admin__header_btn,
+.admin__header_btn-words {
  background-color: #00BF82;
  border: none;
  color: #fff;
  font-size: 22px;
+ transition: 1s;
+}
+
+.admin__header_btn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.admin__header_btn-active {
+  text-decoration: underline;
+  color: #E53935;
 }
 
 .admin__new-card_category {
@@ -696,7 +715,8 @@ tr:nth-child(even) {
 .admin__btn_update,
 .admin__change-word,
 .word__btn_cancel,
-.word__btn_submit {
+.word__btn_submit,
+.word__btn_change {
   width: 142px;
   height: 54px;
   background: none;
@@ -719,12 +739,14 @@ tr:nth-child(even) {
 .admin__btn_category-create,
 .admin__btn_update,
 .admin__change-word,
-.word__btn_submit {
+.word__btn_submit,
+.word__btn_change {
   border: 2px solid #00BF82;
   color: #00BF82;
 }
 
 .admin__word {
+  position: relative;
   width: 361px;
   height: 458px;
   display: flex;
@@ -756,7 +778,8 @@ tr:nth-child(even) {
   font-size: 22px;
 }
 
-.admin__btn_del-word {
+.admin__btn_del-word,
+.admin__btn_del {
   position: absolute;
   top: 4px;
   right: 8px;
